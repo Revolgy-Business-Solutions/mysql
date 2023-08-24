@@ -1,7 +1,7 @@
 # AWS RDS Versions
 
 ### What is it
-This repository contains tags with all versions of AWS RDS databases of type `postgresql` that are updated regularly using the official AWS RDS API. The purpose of this repo is to provide a datasource for **[Renovate](https://docs.renovatebot.com/)** to monitor and update the database engine versions in your Terraform files. 
+This repository contains tags with all versions of AWS RDS databases of type `mysql` that are updated regularly using the official AWS RDS API. The purpose of this repo is to provide a datasource for **[Renovate](https://docs.renovatebot.com/)** to monitor and update the database engine versions in your Terraform files. 
 
 ### How it works 
 This repo uses a GitHub Action to fetch the latest RDS versions from the AWS API and create or update the corresponding tags. The tags are named as `engine_version`, such as *13.4*. The tags are sorted by the docker versioning scheme, which follows the semantic versioning rules. 
@@ -27,7 +27,7 @@ To use this repo, you need to have Renovate installed and configured. You need t
 ```
 The regex manager will match the engine name and version from your Terraform files that match the file pattern:
 ```
-engine         =  "postgres"
+engine         =  "mysql"
 engine_version =  "14.7"
 ```
 The regex manager will use the *[github-tags](https://docs.renovatebot.com/modules/datasource/github-tags/)* datasource to fetch the latest tags from this repo as the available versions for the engine.
