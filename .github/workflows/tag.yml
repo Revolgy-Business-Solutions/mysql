@@ -1,4 +1,4 @@
-name: Tag with PostgreSQL versions
+name: Tag with MySQL versions
 on:
   workflow_dispatch:
     inputs: {}
