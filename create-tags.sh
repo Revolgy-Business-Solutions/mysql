@@ -2,5 +2,5 @@
 for tag in "$@"
 do
   git tag "$tag"
-  git push origin "$tag"
+  git push -f origin "$tag"
 done
